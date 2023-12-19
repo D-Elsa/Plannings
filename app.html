@@ -4,40 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planning</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        input {
-            margin-right: 10px;
-        }
-    </style>
 </head>
 <body>
-    <h1>Gestion de Plannings</h1>
+    <h1>Application de Gestion de Plannings</h1>
     
-    <div>
-        <input type="text" id="taskInput" placeholder="New task">
-        <button onclick="addTask()">Add Task</button>
-    </div>
 
-    <ul id="taskList">
-        <!-- Task items will be added here dynamically -->
-    </ul>
+    <form>
+        <label for="task">Tâche :</label>
+        <input type="text" id="task" name="task" required>
 
-    <script>
-        function addTask() {
-            var taskInput = document.getElementById("taskInput");
-            var taskList = document.getElementById("taskList");
+        <label for="date">Date :</label>
+        <input type="date" id="date" name="date" required>
 
-            if (taskInput.value.trim() !== "") {
-                var newTask = document.createElement("li");
-                newTask.textContent = taskInput.value;
-                taskList.appendChild(newTask);
-                taskInput.value = "";
-            }
-        }
-    </script>
+        <label for="time">Heure :</label>
+        <input type="time" id="time" name="time" required>
+
+        <button type="submit">Ajouter Tâche</button>
+    </form>
+
 </body>
 </html>
